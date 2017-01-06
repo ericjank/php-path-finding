@@ -36,7 +36,7 @@ class InRAMGraph implements Graph
         return $this->graph[$id]['vertex'];
     }
 
-    public function getVertexEdgesWithUnwalkedNeighbours(Vertex $vertex): \Iterator
+    public function getVertexEdgesWithUnvisitedNeighbours(Vertex $vertex): \Iterator
     {
         $this->throwExceptionIfIdNotKnown($vertex->getId());
         return call_user_func(function() use ($vertex) {

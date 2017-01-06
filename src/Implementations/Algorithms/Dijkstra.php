@@ -41,7 +41,7 @@ class Dijkstra implements ShortestPathFinder
                 break;
             }
             $currentDistance = $current->getDistanceFromStart();
-            $edges = $this->graph->getVertexEdgesWithUnwalkedNeighbours($current);
+            $edges = $this->graph->getVertexEdgesWithUnvisitedNeighbours($current);
             foreach ($edges as $edge) {
                 $other = $edge->getOtherVertex($current);
                 $hadDistanceSet = $other->hasDistanceFromStartSet();

@@ -1,13 +1,13 @@
 <?php
 
+namespace KISS\PathFinding\Tests;
 
 use \KISS\PathFinding\{
     Vertex,
-    PathStep,
+    VerticesBag,
     Exceptions\AddingVertexWithNoDistanceException,
     Exceptions\AddingVisitedVertexException,
-    Exceptions\BagIsEmptyException,
-    Implementations\InRAM\InRAMVerticesBag
+    Exceptions\BagIsEmptyException    
 };
 
 /**
@@ -15,14 +15,16 @@ use \KISS\PathFinding\{
  *
  * @author Milko Kosturkov<mkosturkov@gmail.com>
  */
-class InRAMVerticesBagTest extends PHPUnit_Framework_TestCase
+abstract class VerticesBagTestCase extends \PHPUnit_Framework_TestCase
 {
     private $bag;
     
+    protected abstract function getVerticesBagInstance() : VerticesBag;
+
     public function setUp()
     {
         parent::setUp();
-        $this->bag = new InRAMVerticesBag();
+        $this->bag = $this->getVerticesBagInstance();
     }
     
     public function testExceptionOnAddingVisitedVertex()

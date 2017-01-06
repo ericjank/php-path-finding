@@ -15,5 +15,5 @@ interface Graph
      * @param \KISS\PathFinding\Vertex $vertex
      * @return \KISS\PathFinding\Vertex\Edge[]
      */
-    public function getVertexEdgesWithUnwalkedNeighbours(Vertex $vertex) : \Iterator;
+    public function getVertexEdgesWithUnvisitedNeighbours(Vertex $vertex) : \Iterator;
 }

@@ -46,16 +46,16 @@ class InRAMVertexesBagTest extends PHPUnit_Framework_TestCase
         $this->assertFalse($this->bag->isEmpty(), 'Bag says it is empty when it is not');
     }
     
-    public function testExceptionOnPoppingFromEmptyBag()
+    public function testExceptionOnPullingFromEmptyBag()
     {
         $this->expectException(BagIsEmptyException::class);
-        $this->bag->popWithLowestDistanceToStart();
+        $this->bag->pullWithLowestDistanceToStart();
     }
     
     /**
      * @depends testIsEmpty
      */
-    public function testPoppWithLowestDistanceToStart()
+    public function testPullWithLowestDistanceToStart()
     {
         $distances = [5, 8, 10, 6, 2, 8, 9];
         $expectedVertexes = [];
@@ -69,7 +69,7 @@ class InRAMVertexesBagTest extends PHPUnit_Framework_TestCase
         });
         $actualVertexes = [];
         while (!$this->bag->isEmpty()) {
-            $actualVertexes[] = $this->bag->popWithLowestDistanceToStart();
+            $actualVertexes[] = $this->bag->pullWithLowestDistanceToStart();
         }
         $this->assertCount(count($expectedVertexes), $actualVertexes, 'Number of returned vertexes is not right');
         foreach ($expectedVertexes as $idx => $expectedVertex) {

@@ -13,5 +13,5 @@ interface VertexesBag
     
     public function isEmpty() : bool;
     
-    public function popWithLowestDistanceToStart() : Vertex;
+    public function pullWithLowestDistanceToStart() : Vertex;
 }

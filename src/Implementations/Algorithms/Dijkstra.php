@@ -35,7 +35,7 @@ class Dijkstra implements ShortestPathFinder
         $this->bag->add($vStart);
         
         do {
-            $current = $this->bag->popWithLowestDistanceToStart();
+            $current = $this->bag->pullWithLowestDistanceToStart();
             $foundPath = $current->getId() == $endId;
             if ($foundPath) {
                 break;

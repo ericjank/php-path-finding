@@ -39,7 +39,7 @@ class InRAMVertexesBag implements VertexesBag
         return empty ($this->vertexes);
     }
 
-    public function popWithLowestDistanceToStart(): Vertex
+    public function pullWithLowestDistanceToStart(): Vertex
     {
         if ($this->isEmpty()) {
             throw new BagIsEmptyException('The bag is empty');

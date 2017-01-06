@@ -1,7 +1,7 @@
 <?php
 
 use \KISS\PathFinding\Implementations\{
-    InRAM\InRAMVertexesBag,
+    InRAM\InRAMVerticesBag,
     InRAM\InRAMGraph,
     Algorithms\Dijkstra
 };
@@ -30,7 +30,7 @@ class DijkstraTest extends PHPUnit_Framework_TestCase
     public function setUp()
     {
         parent::setUp();
-        $this->bag = new InRAMVertexesBag();
+        $this->bag = new InRAMVerticesBag();
         $this->graph = new InRAMGraph($this->map);
         $this->finder = new Dijkstra($this->graph, $this->bag);
     }

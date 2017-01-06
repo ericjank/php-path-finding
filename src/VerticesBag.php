@@ -7,7 +7,7 @@ namespace KISS\PathFinding;
  *
  * @author Milko Kosturkov<mkosturkov@gmail.com>
  */
-interface VertexesBag
+interface VerticesBag
 {
     public function add(Vertex $v);
     

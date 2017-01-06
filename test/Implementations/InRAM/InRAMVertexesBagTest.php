@@ -7,7 +7,7 @@ use \KISS\PathFinding\{
     Exceptions\AddingVertexWithNoDistanceException,
     Exceptions\AddingWalkedVertexException,
     Exceptions\BagIsEmptyException,
-    Implementations\InRAM\InRAMVertexesBag
+    Implementations\InRAM\InRAMVerticesBag
 };
 
 /**
@@ -15,14 +15,14 @@ use \KISS\PathFinding\{
  *
  * @author Milko Kosturkov<mkosturkov@gmail.com>
  */
-class InRAMVertexesBagTest extends PHPUnit_Framework_TestCase
+class InRAMVerticesBagTest extends PHPUnit_Framework_TestCase
 {
     private $bag;
     
     public function setUp()
     {
         parent::setUp();
-        $this->bag = new InRAMVertexesBag();
+        $this->bag = new InRAMVerticesBag();
     }
     
     public function testExceptionOnAddingWalkedVertex()

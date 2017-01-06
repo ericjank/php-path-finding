@@ -4,7 +4,7 @@ namespace KISS\PathFinding\Implementations\InRAM;
 
 use \KISS\PathFinding\{
     Vertex,
-    VertexesBag,
+    VerticesBag,
     Exceptions\AddingVertexWithNoDistanceException,
     Exceptions\AddingWalkedVertexException,
     Exceptions\BagIsEmptyException
@@ -15,7 +15,7 @@ use \KISS\PathFinding\{
  *
  * @author Milko Kosturkov<mkosturkov@gmail.com>
  */
-class InRAMVertexesBag implements VertexesBag
+class InRAMVerticesBag implements VerticesBag
 {
     /**
      *

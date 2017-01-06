@@ -6,7 +6,7 @@ use \KISS\PathFinding\{
     Graph,
     Edge,
     Vertex,
-    VertexesBag,
+    VerticesBag,
     ShortestPathFinder
 };
 
@@ -22,7 +22,7 @@ class Dijkstra implements ShortestPathFinder
     
     private $bag;
     
-    public function __construct(Graph $graph, VertexesBag $bag)
+    public function __construct(Graph $graph, VerticesBag $bag)
     {
         $this->graph = $graph;
         $this->bag = $bag;

@@ -4,7 +4,6 @@ namespace KISS\PathFinding\Implementations\InRAM;
 
 use \KISS\PathFinding\{
     Vertex,
-    PathStep,
     Exceptions\NoDistanceFromStartSetException
 };
 

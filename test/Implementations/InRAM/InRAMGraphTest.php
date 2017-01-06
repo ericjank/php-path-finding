@@ -68,7 +68,7 @@ class InRAMGraphTest extends PHPUnit_Framework_TestCase
         }
     }
     
-    public function testReturningUnwalkedVertexes()
+    public function testReturningUnwalkedVertices()
     {
         $vertexA = $this->graph->getVertexById('a');
         $this->graph->getVertexById('b')->markAsWalked();

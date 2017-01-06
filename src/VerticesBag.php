@@ -3,7 +3,7 @@
 namespace KISS\PathFinding;
 
 /**
- * Description of UnwalkedVertexesBag
+ * Description of UnwalkedVerticesBag
  *
  * @author Milko Kosturkov<mkosturkov@gmail.com>
  */

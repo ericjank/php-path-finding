@@ -1,6 +1,6 @@
 {
     "name": "kiss/path-finding",
-    "description": "The package implements algorithm for finding the shortest path between two vertexes in a graph.",
+    "description": "The package implements algorithm for finding the shortest path between two vertices in a graph.",
     "type": "library",
     "require": {
         "php": "^7.0"

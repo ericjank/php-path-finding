@@ -11,7 +11,7 @@ use \KISS\PathFinding\{
 };
 
 /**
- * Description of InRAMVertexesBag
+ * Description of InRAMVerticesBag
  *
  * @author Milko Kosturkov<mkosturkov@gmail.com>
  */
@@ -58,25 +58,25 @@ class InRAMVerticesBagTest extends PHPUnit_Framework_TestCase
     public function testPullWithLowestDistanceToStart()
     {
         $distances = [5, 8, 10, 6, 2, 8, 9];
-        $expectedVertexes = [];
+        $expectedVertices = [];
         foreach ($distances as $distance) {
             $vertex = $this->buildVertexWithDistance($distance);
-            $expectedVertexes[] = $vertex;
+            $expectedVertices[] = $vertex;
             $this->bag->add($vertex);
         }
-        usort($expectedVertexes, function(Vertex $a, Vertex $b) {
+        usort($expectedVertices, function(Vertex $a, Vertex $b) {
             return $a->getDistanceFromStart() <=> $b->getDistanceFromStart();
         });
-        $actualVertexes = [];
+        $actualVertices = [];
         while (!$this->bag->isEmpty()) {
-            $actualVertexes[] = $this->bag->pullWithLowestDistanceToStart();
+            $actualVertices[] = $this->bag->pullWithLowestDistanceToStart();
         }
-        $this->assertCount(count($expectedVertexes), $actualVertexes, 'Number of returned vertexes is not right');
-        foreach ($expectedVertexes as $idx => $expectedVertex) {
+        $this->assertCount(count($expectedVertices), $actualVertices, 'Number of returned vertices is not right');
+        foreach ($expectedVertices as $idx => $expectedVertex) {
             $this->assertEquals(
                 $expectedVertex->getId(),
-                $actualVertexes[$idx]->getId(),
-                "Vertexes at index $idx do not match"
+                $actualVertices[$idx]->getId(),
+                "Vertices at index $idx do not match"
             );
         }
     }

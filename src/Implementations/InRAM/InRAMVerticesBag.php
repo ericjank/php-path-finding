@@ -11,7 +11,7 @@ use \KISS\PathFinding\{
 };
 
 /**
- * Description of InRAMVertexesBag
+ * Description of InRAMVerticesBag
  *
  * @author Milko Kosturkov<mkosturkov@gmail.com>
  */
@@ -21,22 +21,22 @@ class InRAMVerticesBag implements VerticesBag
      *
      * @var Vertex[]
      */
-    private $vertexes = [];
+    private $vertices = [];
     
     public function add(Vertex $v)
     {
         if ($v->isWalked()) {
-            throw new AddingWalkedVertexException('Trying to add walked vertex to vertexes bag');
+            throw new AddingWalkedVertexException('Trying to add walked vertex to vertices bag');
         }
         if (!$v->hasDistanceFromStartSet()) {
             throw new AddingVertexWithNoDistanceException('Trying to add vertex with no path step set');
         }
-        $this->vertexes[] = $v;
+        $this->vertices[] = $v;
     }
     
     public function isEmpty() : bool
     {
-        return empty ($this->vertexes);
+        return empty ($this->vertices);
     }
 
     public function pullWithLowestDistanceToStart(): Vertex
@@ -46,13 +46,13 @@ class InRAMVerticesBag implements VerticesBag
         }
         $selectedIndex = -1;
         $lowestDistance = null;
-        foreach ($this->vertexes as $idx => $vertex) {
+        foreach ($this->vertices as $idx => $vertex) {
             $currentDistance = $vertex->getDistanceFromStart();
             if (is_null($lowestDistance) || $lowestDistance > $currentDistance) {
                 $lowestDistance = $currentDistance;
                 $selectedIndex = $idx;
             }
         }
-        return array_splice($this->vertexes, $selectedIndex, 1)[0];
+        return array_splice($this->vertices, $selectedIndex, 1)[0];
     }
 }

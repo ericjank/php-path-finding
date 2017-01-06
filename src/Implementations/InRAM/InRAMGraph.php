@@ -42,7 +42,7 @@ class InRAMGraph implements Graph
         return call_user_func(function() use ($vertex) {
             foreach ($this->graph[$vertex->getId()]['edges'] as $edge) {
                 $other = $edge->getOtherVertex($vertex);
-                if (!$other->isWalked()) {
+                if (!$other->isVisited()) {
                     yield $edge;
                 }
             }

@@ -19,7 +19,7 @@ interface Vertex
     
     public function getVertexToStart() : Vertex;
     
-    public function markAsWalked();
+    public function visit();
     
-    public function isWalked() : bool;
+    public function isVisited() : bool;
 }

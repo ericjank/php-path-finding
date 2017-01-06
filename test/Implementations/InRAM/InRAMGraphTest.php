@@ -71,7 +71,7 @@ class InRAMGraphTest extends PHPUnit_Framework_TestCase
     public function testReturningUnwalkedVertices()
     {
         $vertexA = $this->graph->getVertexById('a');
-        $this->graph->getVertexById('b')->markAsWalked();
+        $this->graph->getVertexById('b')->visit();
         $edges = $this->graph->getVertexEdgesWithUnwalkedNeighbours($vertexA);
         $hasO = false;
         $hasD = false;

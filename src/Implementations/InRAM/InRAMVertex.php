@@ -20,7 +20,7 @@ class InRAMVertex implements Vertex
     
     private $vertexToStart;
     
-    private $isWalked = false;
+    private $isVisited = false;
     
     public function __construct($id)
     {
@@ -55,14 +55,14 @@ class InRAMVertex implements Vertex
         $this->vertexToStart = $throughVertex;
     }
 
-    public function isWalked(): bool
+    public function isVisited(): bool
     {
-        return $this->isWalked;
+        return $this->isVisited;
     }
 
-    public function markAsWalked()
+    public function visit()
     {
-        $this->isWalked = true;
+        $this->isVisited = true;
     }
     
     private function throwExceptionIfNoDistanceSet()

@@ -27,7 +27,7 @@ class InRAMVertexTest extends PHPUnit_Framework_TestCase
     {
         $this->assertEquals($this->vertexId, $this->vertex->getId(), 'Unmatching vertex id');
         $this->assertFalse($this->vertex->hasDistanceFromStartSet(), 'Vertex says it has distance when none set');
-        $this->assertFalse($this->vertex->isWalked(), 'Vertex says it is walked when it hasn\'t been' );
+        $this->assertFalse($this->vertex->isVisited(), 'Vertex says it is walked when it hasn\'t been' );
     }
     
     public function testDistanceFromStartException()
@@ -57,10 +57,10 @@ class InRAMVertexTest extends PHPUnit_Framework_TestCase
         $this->assertEquals($testDistance, $this->vertex->getDistanceFromStart(), 'Wrong distance from start');
     }
     
-    public function testMarkingAsWalked()
+    public function testVisiting()
     {
-        $this->vertex->markAsWalked();
-        $this->assertTrue($this->vertex->isWalked(), 'Vertex says it has not been walked when it has been');
+        $this->vertex->visit();
+        $this->assertTrue($this->vertex->isVisited(), 'Vertex says it has not been visited when it has been');
     }
     
 }

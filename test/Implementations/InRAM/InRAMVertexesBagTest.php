@@ -5,7 +5,7 @@ use \KISS\PathFinding\{
     Vertex,
     PathStep,
     Exceptions\AddingVertexWithNoDistanceException,
-    Exceptions\AddingWalkedVertexException,
+    Exceptions\AddingVisitedVertexException,
     Exceptions\BagIsEmptyException,
     Implementations\InRAM\InRAMVerticesBag
 };
@@ -25,10 +25,10 @@ class InRAMVerticesBagTest extends PHPUnit_Framework_TestCase
         $this->bag = new InRAMVerticesBag();
     }
     
-    public function testExceptionOnAddingWalkedVertex()
+    public function testExceptionOnAddingVisitedVertex()
     {
-        $this->expectException(AddingWalkedVertexException::class);
-        $vertex = $this->buildVertexWithMethodsAndValues(['isWalked' => true]);
+        $this->expectException(AddingVisitedVertexException::class);
+        $vertex = $this->buildVertexWithMethodsAndValues(['isVisited' => true]);
         $this->bag->add($vertex);
     }
     
@@ -91,7 +91,7 @@ class InRAMVerticesBagTest extends PHPUnit_Framework_TestCase
     
     private function buildAddableVertex()
     {
-        return $this->buildVertexWithMethodsAndValues(['isWalked' => false, 'hasDistanceFromStartSet' => true]);
+        return $this->buildVertexWithMethodsAndValues(['isVisited' => false, 'hasDistanceFromStartSet' => true]);
     }
     
     private function buildVertexWithMethodsAndValues(array $methodsAndValues) : Vertex

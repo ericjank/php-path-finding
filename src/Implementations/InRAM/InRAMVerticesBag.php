@@ -6,7 +6,7 @@ use \KISS\PathFinding\{
     Vertex,
     VerticesBag,
     Exceptions\AddingVertexWithNoDistanceException,
-    Exceptions\AddingWalkedVertexException,
+    Exceptions\AddingVisitedVertexException,
     Exceptions\BagIsEmptyException
 };
 
@@ -25,8 +25,8 @@ class InRAMVerticesBag implements VerticesBag
     
     public function add(Vertex $v)
     {
-        if ($v->isWalked()) {
-            throw new AddingWalkedVertexException('Trying to add walked vertex to vertices bag');
+        if ($v->isVisited()) {
+            throw new AddingVisitedVertexException('Trying to add walked vertex to vertices bag');
         }
         if (!$v->hasDistanceFromStartSet()) {
             throw new AddingVertexWithNoDistanceException('Trying to add vertex with no path step set');

@@ -7,6 +7,6 @@ namespace KISS\PathFinding\Exceptions;
  *
  * @author Milko Kosturkov<mkosturkov@gmail.com>
  */
-class AddingWalkedVertexException extends \Exception
+class AddingVisitedVertexException extends \Exception
 {
 }

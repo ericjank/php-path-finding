@@ -9,7 +9,7 @@ use \KISS\PathFinding\{
 };
 
 /**
- * Description of InRAMVertexListGraph
+ * An implementation of a weighted graph designed to reside in memory
  *
  * @author Milko Kosturkov<mkosturkov@gmail.com>
  */
@@ -17,6 +17,17 @@ class InRAMGraph implements Graph
 {
     private $graph = [];
     
+    /**
+     * @param array $map A map describing all vertices and edges in the graph
+     * Map example: 
+     * [
+     *   'a' => ['b' => 7, 'o' => 9, 'd' => 14],
+     *   'b' => ['o' => 10, 'c' => 15],
+     *   'c' => ['o' => 11, 't' => 6],
+     *   'd' => ['o' => 2, 't' => 20],
+     *   'y' => ['z' => 3]
+     * ]
+     */
     public function __construct(array $map)
     {
         foreach ($map as $vertexIdA => $edges) {

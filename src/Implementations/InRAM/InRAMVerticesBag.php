@@ -11,7 +11,7 @@ use \KISS\PathFinding\{
 };
 
 /**
- * Description of InRAMVerticesBag
+ * Implementation of a vertices bag designed to reside in ram
  *
  * @author Milko Kosturkov<mkosturkov@gmail.com>
  */

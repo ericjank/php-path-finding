@@ -8,8 +8,6 @@ use \KISS\PathFinding\{
 };
 
 /**
- * Description of InRAMVertexTest
- *
  * @author Milko Kosturkov<mkosturkov@gmail.com>
  */
 abstract class VertexTestCase extends \PHPUnit_Framework_TestCase
@@ -18,6 +16,9 @@ abstract class VertexTestCase extends \PHPUnit_Framework_TestCase
     
     private $vertex;
     
+    /**
+     * @param mixed $vertexId The id of the vertex
+     */
     protected abstract function getVertexInstance($vertexId) : Vertex;
 
     public function setUp()

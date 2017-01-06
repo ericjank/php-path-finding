@@ -11,8 +11,8 @@ use \KISS\PathFinding\{
 };
 
 /**
- * Description of Dijkstra
- *
+ * An implementation of the Dijkstra shortest path finding alogrithm
+ * 
  * @author Milko Kosturkov<mkosturkov@gmail.com>
  */
 class Dijkstra implements ShortestPathFinder

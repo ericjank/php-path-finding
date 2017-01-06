@@ -9,8 +9,8 @@ use \KISS\PathFinding\{
 };
 
 /**
- * Description of Edge
- *
+ * A simple implementation of Edge in a weighted graph designed to reside in RAM
+ * 
  * @author Milko Kosturkov<mkosturkov@gmail.com>
  */
 class InRAMEdge implements Edge
@@ -22,6 +22,11 @@ class InRAMEdge implements Edge
     
     private $weight;
     
+    /**
+     * @param Vertex $va A vertex connected to the edge
+     * @param Vertex $vb Another vertex connected to the edge
+     * @param float $weight The weight (distance) of the edge
+     */
     public function __construct(Vertex $va, Vertex $vb, float $weight)
     {
         $this->va = $va;

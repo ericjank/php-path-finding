@@ -11,8 +11,6 @@ use \KISS\PathFinding\{
 };
 
 /**
- * Description of InRAMVerticesBag
- *
  * @author Milko Kosturkov<mkosturkov@gmail.com>
  */
 abstract class VerticesBagTestCase extends \PHPUnit_Framework_TestCase

@@ -8,7 +8,7 @@ use \KISS\PathFinding\{
 };
 
 /**
- * Description of InRAMVertex
+ * Implmentation of a vertex designed to reseide in ram
  *
  * @author Milko Kosturkov<mkosturkov@gmail.com>
  */
@@ -22,6 +22,9 @@ class InRAMVertex implements Vertex
     
     private $isVisited = false;
     
+    /**
+     * @param mixed $id ID of the vertex
+     */
     public function __construct($id)
     {
         $this->id = $id;

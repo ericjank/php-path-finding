@@ -9,8 +9,6 @@ use \KISS\PathFinding\{
 };
 
 /**
- * Description of InRAMVertexTest
- *
  * @author Milko Kosturkov<mkosturkov@gmail.com>
  */
 class InRAMVertexTest extends VertexTestCase

@@ -9,8 +9,6 @@ use \KISS\PathFinding\{
 };
 
 /**
- * Description of InRAMGraphTest
- *
  * @author Milko Kosturkov<mkosturkov@gmail.com>
  */
 abstract class GraphTestCase extends \PHPUnit_Framework_TestCase
@@ -23,7 +21,11 @@ abstract class GraphTestCase extends \PHPUnit_Framework_TestCase
     ];
     
     private $graph;
-    
+ 
+    /**
+     * @param array $map The graph that the returned object is expected to represent
+     * @see self::$map for example
+     */
     protected abstract function getGraphInstance(array $map) : Graph;
 
     public function setUp()

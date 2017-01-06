@@ -9,8 +9,6 @@ use \KISS\PathFinding\{
 };
 
 /**
- * Description of InRAMGraphTest
- *
  * @author Milko Kosturkov<mkosturkov@gmail.com>
  */
 class InRAMGraphTest extends GraphTestCase

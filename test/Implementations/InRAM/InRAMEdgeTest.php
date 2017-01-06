@@ -10,8 +10,6 @@ use \KISS\PathFinding\{
 };
 
 /**
- * Description of InRAMEdgeText
- *
  * @author Milko Kosturkov<mkosturkov@gmail.com>
  */
 class InRAMEdgeTest extends EdgeTestCase

@@ -7,8 +7,6 @@ use \KISS\PathFinding\Implementations\{
 };
 
 /**
- * Description of DijkstraTest
- *
  * @author Milko Kosturkov<mkosturkov@gmail.com>
  */
 class DijkstraTest extends PHPUnit_Framework_TestCase

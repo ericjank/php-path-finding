@@ -9,8 +9,6 @@ use \KISS\PathFinding\{
 };
 
 /**
- * Description of InRAMVerticesBagTest
- *
  * @author Milko Kosturkov<mkosturkov@gmail.com>
  */
 class InRAMVerticesBagTest extends VerticesBagTestCase

@@ -9,8 +9,6 @@ use \KISS\PathFinding\{
 };
 
 /**
- * Description of RAMEdgeTest
- *
  * @author Milko Kosturkov<mkosturkov@gmail.com>
  */
 abstract class EdgeTestCase extends \PHPUnit_Framework_TestCase
@@ -23,6 +21,11 @@ abstract class EdgeTestCase extends \PHPUnit_Framework_TestCase
     
     private $edge;
     
+    /**
+     * @param Vertex $vertexA One of the vertices attached to the edge
+     * @param Vertex $vertexB One of the vertives attached to the edge
+     * @param float $weight The weight of the edge
+     */
     abstract protected function getEdgeInstance(Vertex $vertexA, Vertex $vertexB, float $weight) : Edge;
     
     public function setUp()
